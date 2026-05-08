@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjwaetvmo6jb" path="res://Assets/Pictures/silhouette_f_022_01.png" id="4_vfb8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfb8b"]
-size = Vector2(58, 52.5)
+size = Vector2(58, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j8ita"]
 size = Vector2(492, 57)
@@ -58,7 +58,7 @@ texture = ExtResource("2_1lonn")
 [node name="forward" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="forward"]
-position = Vector2(716, 323)
+position = Vector2(715, 323)
 shape = SubResource("RectangleShape2D_vfb8b")
 
 [node name="back" type="Area2D" parent="."]
@@ -80,10 +80,10 @@ color = Color(0, 0, 0, 1)
 [node name="text" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 465.0
-offset_top = 301.0
-offset_right = 646.1321
-offset_bottom = 324.0
+offset_left = 457.0
+offset_top = 299.0
+offset_right = 646.93713
+offset_bottom = 329.1887
 scale = Vector2(1.59, 1.59)
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfb8b")
 text = "you found a picture piece"

@@ -27,7 +27,8 @@ var sfx_sounds = {
 	"static_for_intro": preload("res://Assets/Audio/static_for_intro.mp3"),
 	"heavy_breath": preload("res://Assets/Audio/heavy_breaths(1).MP3"),
 	"door_knock": preload("res://Assets/Audio/door_knock.mp3"),
-	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3")
+	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3"),
+	"hand": preload("res://Assets/Audio/hand.MP3")
 
 }
 
