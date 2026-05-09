@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ikol4outcyb"]
+[gd_scene load_steps=10 format=3 uid="uid://ikol4outcyb"]
 
 [ext_resource type="Script" uid="uid://cuvipekox704x" path="res://Scenes/Scripts/c_005_01.gd" id="1_3jpmk"]
-[ext_resource type="Texture2D" uid="uid://bcqqaueakfh8l" path="res://Assets/Digicam/DSC06875.JPG" id="1_w28me"]
+[ext_resource type="Texture2D" uid="uid://c5qso8gfbl3uk" path="res://Assets/Digicam/DSC06876.JPG" id="2_xmweh"]
 [ext_resource type="FontFile" uid="uid://bnnhj8xv7cg1" path="res://Assets/Font/VCR_OSD_MONO_1.001.ttf" id="3_lmcay"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3jpmk"]
-radius = 15.0
-height = 50.0
+[ext_resource type="Texture2D" uid="uid://uwgpe281y1v3" path="res://Assets/Pictures/paper_tree_scratch.png" id="4_0oiej"]
+[ext_resource type="VideoStream" uid="uid://38xmpy1mbm3p" path="res://Assets/Jumpscares_OGV/woman_approach.ogv" id="5_xmweh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w28me"]
 size = Vector2(314.5, 36)
@@ -17,6 +15,9 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_xmweh"]
 font = ExtResource("3_lmcay")
 font_size = 11
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmweh"]
+size = Vector2(177, 148)
 
 [node name="c_005_01" type="Control"]
 layout_mode = 3
@@ -53,13 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.14, 0.14)
 mouse_filter = 2
-texture = ExtResource("1_w28me")
-
-[node name="Entity" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entity"]
-position = Vector2(599, 248)
-shape = SubResource("CapsuleShape2D_3jpmk")
+texture = ExtResource("2_xmweh")
 
 [node name="BACK" type="Area2D" parent="."]
 
@@ -81,10 +76,10 @@ color = Color(0, 0, 0, 1)
 [node name="text" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 568.0
-offset_top = 354.0
-offset_right = 760.4528
-offset_bottom = 374.7547
+offset_left = 539.0
+offset_top = 348.0
+offset_right = 731.4528
+offset_bottom = 368.7547
 scale = Vector2(1.59, 1.59)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0oiej")
 text = "maybe i'm just hallucinating"
@@ -92,9 +87,31 @@ label_settings = SubResource("LabelSettings_xmweh")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="input_event" from="Entity" to="." method="_on_entity_input_event"]
-[connection signal="mouse_entered" from="Entity" to="." method="_on_entity_mouse_entered"]
-[connection signal="mouse_exited" from="Entity" to="." method="_on_entity_mouse_exited"]
+[node name="PaperTreeScratch" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(565, 338)
+scale = Vector2(0.99898946, 0.99898964)
+texture = ExtResource("4_0oiej")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 4.0000153
+offset_right = 1278.0
+offset_bottom = 724.0
+scale = Vector2(0.905, 0.905)
+mouse_filter = 2
+stream = ExtResource("5_xmweh")
+
+[node name="jumpscare" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumpscare"]
+position = Vector2(786, 312)
+shape = SubResource("RectangleShape2D_xmweh")
+
 [connection signal="input_event" from="BACK" to="." method="_on_back_input_event"]
 [connection signal="mouse_entered" from="BACK" to="." method="_on_back_mouse_entered"]
 [connection signal="mouse_exited" from="BACK" to="." method="_on_back_mouse_exited"]
+[connection signal="input_event" from="jumpscare" to="." method="_on_jumpscare_input_event"]
+[connection signal="mouse_entered" from="jumpscare" to="." method="_on_jumpscare_mouse_entered"]
+[connection signal="mouse_exited" from="jumpscare" to="." method="_on_jumpscare_mouse_exited"]

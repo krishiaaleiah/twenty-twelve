@@ -31,4 +31,4 @@ func _on_to_trees_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			AudioManager.play_sfx("click")
-			pass
+			get_tree().change_scene_to_file("res://Scenes/Game/c_005_01.tscn") 
