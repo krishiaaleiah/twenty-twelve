@@ -13,3 +13,9 @@ func _on_item_added(item_name: String):
 	# new_label.add_theme_color_override("font_color", Color.WHITE)
 	
 	add_child(new_label)
+
+func hide_inventory():
+	$InventoryUI.hide()
+
+func show_inventory():
+	$InventoryUI.show()

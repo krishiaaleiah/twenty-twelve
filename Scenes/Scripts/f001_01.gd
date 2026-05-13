@@ -4,6 +4,7 @@ extends Control
 @onready var cr_area: Area2D = $CR
 
 func _ready() -> void:
+	InventoryUi.show()
 	CursorManager.set_normal()
 	text.hide()
 	text2.hide()

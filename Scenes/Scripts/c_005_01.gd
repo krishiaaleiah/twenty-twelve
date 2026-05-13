@@ -19,18 +19,18 @@ func _on_back_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 
 func _ready() -> void:
 	CursorManager.set_normal()
-	if GlobalManager.bush_sound == 0:
-		GlobalManager.bush_sound += 1
-	if GlobalManager.is_picture_picked_up == true:
-		redact.show()
+	if GlobalManager.running_jumpscare_triggered == true:
+		area.hide()
 	
-
+	
 func _on_jumpscare_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			AudioManager.play_sfx("click")
+			AudioManager.stop_all_bgm()
 			jumpscare.play()
 			area.hide()
+			GlobalManager.running_jumpscare_triggered = true
 			jumpscare.finished.connect(_on_video_finished)
 func _on_jumpscare_mouse_entered() -> void:
 	CursorManager.set_hover()
@@ -38,4 +38,5 @@ func _on_jumpscare_mouse_exited() -> void:
 	CursorManager.set_normal()
 
 func _on_video_finished():
-	jumpscare.hide()
+	AudioManager.play_bgm("ambiance_extreme")
+	SceneChanger.change_scene("res://Scenes/Game/c_005_01.tscn")

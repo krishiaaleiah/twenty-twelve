@@ -28,7 +28,11 @@ var sfx_sounds = {
 	"heavy_breath": preload("res://Assets/Audio/heavy_breaths(1).MP3"),
 	"door_knock": preload("res://Assets/Audio/door_knock.mp3"),
 	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3"),
-	"hand": preload("res://Assets/Audio/hand.MP3")
+	"hand": preload("res://Assets/Audio/hand.MP3"),
+	"gate_open": preload("res://Assets/Audio/cr_opening.MP3"),
+	"telephone_convo": preload("res://Assets/Audio/telephone_convo(1).MP3"),
+	"footstep": preload("res://Assets/Audio/corridor_footstep.MP3"),
+	"flashlight": preload("res://Assets/Audio/flashlight_on.MP3")
 
 }
 
@@ -71,7 +75,7 @@ func stop_all_bgm() -> void:
 	for track_name in active_bgm_players.keys():
 		stop_bgm(track_name)
 	
-func play_sfx(sound_name: String) -> void:
+func play_sfx(sound_name: String) -> AudioStreamPlayer:
 	if not sfx_sounds.has(sound_name):
 		push_error("AudioManager: SFX not found -> " + sound_name)
 		return
@@ -82,3 +86,13 @@ func play_sfx(sound_name: String) -> void:
 	add_child(sfx_player)
 	sfx_player.play()
 	sfx_player.finished.connect(sfx_player.queue_free)
+	
+	return sfx_player
+	
+func stop_all_sfx() -> void:
+	for child in get_children():
+		# Check if it's a standard AudioStreamPlayer (your SFX) 
+		# and NOT one of your BGM players
+		if child is AudioStreamPlayer and not child in active_bgm_players.values():
+			child.stop()
+			child.queue_free()

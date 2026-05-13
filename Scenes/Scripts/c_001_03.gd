@@ -5,13 +5,13 @@ extends Control
 
 func _ready() -> void:
 	CursorManager.set_normal()
-	if GlobalManager.is_key_picked_up == true:
+	if GlobalManager.is_key_picked_up == 1 or GlobalManager.is_key_picked_up == 2:
 		redact.show()
 
 func _on_key_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			if GlobalManager.is_key_picked_up == false:
+			if GlobalManager.is_key_picked_up == 0:
 				AudioManager.play_sfx("click")
 				item_pickup.show()
 				pickup_text.show()
@@ -19,7 +19,7 @@ func _on_key_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 				item_pickup.hide()
 				pickup_text.hide()
 				redact.show()
-				GlobalManager.is_key_picked_up = true
+				GlobalManager.is_key_picked_up = 1
 				Inventory.add_item("rusty key")
 			else:
 				pass

@@ -11,8 +11,12 @@ func _on_to_cr_mouse_exited() -> void:
 func _on_to_cr_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			AudioManager.play_sfx("click")
-			get_tree().change_scene_to_file("res://Scenes/Game/c_003_01.tscn")
+			if GlobalManager.is_code == true:
+				AudioManager.play_sfx("click")
+				SceneChanger.change_scene("res://Scenes/ExtraScenes/Code_Scene.tscn")
+			else:
+				AudioManager.play_sfx("click")
+				get_tree().change_scene_to_file("res://Scenes/Game/c_003_01.tscn")
 
 
 

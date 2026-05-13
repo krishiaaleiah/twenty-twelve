@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmau216pggs2r"]
 
 [ext_resource type="Script" uid="uid://bw7k3fik4ahh6" path="res://Scenes/Scripts/f_036_01.gd" id="1_0pdvp"]
-[ext_resource type="Texture2D" uid="uid://c1vf0e6cglbjy" path="res://Assets/Digicam/DSC06954.JPG" id="2_g1v3r"]
+[ext_resource type="Texture2D" uid="uid://cd7mlw5h2j03l" path="res://Assets/Digicam/DSC06956.JPG" id="2_0pdvp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0s7s4"]
-size = Vector2(90, 118)
+size = Vector2(248, 238.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04coj"]
 size = Vector2(461, 24)
@@ -44,12 +44,12 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.14, 0.14)
 mouse_filter = 2
-texture = ExtResource("2_g1v3r")
+texture = ExtResource("2_0pdvp")
 
 [node name="forward" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="forward"]
-position = Vector2(578, 286)
+position = Vector2(585, 274.25)
 shape = SubResource("RectangleShape2D_0s7s4")
 
 [node name="backward" type="Area2D" parent="."]

@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cylr3ca7gj73t" path="res://Assets/Digicam/DSC06946.JPG" id="2_in8uy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbk4c"]
-size = Vector2(84, 114)
+size = Vector2(128, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qytr"]
 size = Vector2(575, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndd4a"]
-size = Vector2(88, 93.5)
+size = Vector2(108, 147.75)
 
 [node name="F029-01" type="Control"]
 layout_mode = 3
@@ -52,7 +52,7 @@ texture = ExtResource("2_in8uy")
 [node name="forward" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="forward"]
-position = Vector2(319, 382)
+position = Vector2(347, 348)
 shape = SubResource("RectangleShape2D_xbk4c")
 
 [node name="backward" type="Area2D" parent="."]
@@ -65,7 +65,7 @@ debug_color = Color(0.6119421, 0.36400536, 0.9945366, 0.41960785)
 [node name="table2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="table2"]
-position = Vector2(798, 390)
+position = Vector2(809, 338)
 shape = SubResource("RectangleShape2D_ndd4a")
 
 [connection signal="input_event" from="forward" to="." method="_on_forward_input_event"]

@@ -26,12 +26,6 @@ var dialogue_data = [
 		"buttons": ["     Yes     ", "     No     "]
 	},
 		{
-		"text": "Ah. I see. You remember just enough to be dangerous to your own peace of mind",
-		"image": preload("res://Assets/Pictures/man_wave.jpg"),
-		"audio": preload("res://Assets/Audio/Audio_Intro/intro_line_4.wav"),
-		"buttons": null
-	},
-		{
 		"text": "That’s a start, I suppose, but don’t let those flickering images trouble you.",
 		"image": preload("res://Assets/Pictures/man_wave.jpg"),
 		"audio": preload("res://Assets/Audio/Audio_Intro/intro_line_5.wav"),
@@ -42,12 +36,6 @@ var dialogue_data = [
 		"image": preload("res://Assets/Pictures/man_smiling.jpg"),
 		"audio": preload("res://Assets/Audio/Audio_Intro/intro_line_6.wav"),
 		"buttons": null
-	},
-		{
-		"text": "You’re looking at the exit again. Why?",
-		"image": preload("res://Assets/Pictures/man_serious.jpg"),
-		"audio": preload("res://Assets/Audio/Audio_Intro/intro_line_7.MP3"),
-		"buttons": ["  Where am I?  ",]
 	},
 		{
 		"text": "You’re wondering what’s beyond that gate, aren’t you? I can tell you now: \n\nit’s just more of the same noise, the same cold,the same exhausting world. ",
@@ -111,7 +99,7 @@ func play_next_step():
 		# Buttons exist? Wait for player input
 		create_buttons(data["buttons"])
 		
-	if current_step == 10:
+	if current_step == 6:
 		AudioManager.stop_all_bgm()
 		AudioManager.play_sfx("heavy_breath")
 		await get_tree().create_timer(1.0).timeout

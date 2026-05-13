@@ -22,6 +22,7 @@ AudioManager="*res://Assets/Audio/AudioManager.tscn"
 GlobalManager="*res://global_manager.tscn"
 Inventory="*res://InventoryManager.gd"
 InventoryUi="*res://inventory_ui.tscn"
+SceneChanger="*res://Scenes/ExtraScenes/scene_changer.tscn"
 
 [display]
 

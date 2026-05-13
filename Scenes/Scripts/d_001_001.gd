@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	AudioManager.play_bgm("ambiance_extreme")
 	CursorManager.set_normal()
 
 func _on_forward_mouse_entered() -> void:
