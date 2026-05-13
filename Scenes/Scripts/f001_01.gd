@@ -2,6 +2,7 @@ extends Control
 @onready var text: Label = $TextLabel
 @onready var text2: Label = $TextLabel2
 @onready var cr_area: Area2D = $CR
+@onready var left: TextureRect = $LeftButton
 
 func _ready() -> void:
 	InventoryUi.show()
@@ -9,6 +10,9 @@ func _ready() -> void:
 	text.hide()
 	text2.hide()
 	await _show_label()
+	if GlobalManager.is_code == true:
+		left.hide()
+	
 
 func _show_label():
 	if GlobalManager.hallway_trigger == 0:

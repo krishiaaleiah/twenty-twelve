@@ -65,13 +65,27 @@ shape = SubResource("RectangleShape2D_spdtb")
 [node name="you_need_to_unlock" type="Label" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 411.0
-offset_top = 319.0
-offset_right = 595.5
-offset_bottom = 342.0
-scale = Vector2(2, 2)
+offset_left = 416.99997
+offset_top = 321.0
+offset_right = 624.0
+offset_bottom = 344.0
+scale = Vector2(1.7, 1.7)
 theme_override_styles/normal = SubResource("StyleBoxFlat_spdtb")
-text = "you need a door key to unlock"
+text = "you need a building key to unlock"
+label_settings = ExtResource("2_m16ri")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="picture_piece" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 436.99997
+offset_top = 317.0
+offset_right = 621.5
+offset_bottom = 340.0
+scale = Vector2(1.7, 1.7)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spdtb")
+text = "you need 2 picture pieces"
 label_settings = ExtResource("2_m16ri")
 horizontal_alignment = 1
 vertical_alignment = 1

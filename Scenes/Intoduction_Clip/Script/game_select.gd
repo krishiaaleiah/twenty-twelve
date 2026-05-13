@@ -4,7 +4,7 @@ extends Control
 var count = 0
 func _on_newgame_button_pressed() -> void:
 	AudioManager.play_sfx("click")
-	get_tree().change_scene_to_file("res://Scenes/Intoduction_Clip/Story_Dialogue_Intro.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Intoduction_Clip/title.tscn")
 
 func _on_loadgame_button_pressed() -> void:
 	AudioManager.play_sfx("click")

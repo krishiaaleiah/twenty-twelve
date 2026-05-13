@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://0m31ti6mw0er"]
+[gd_scene load_steps=9 format=3 uid="uid://0m31ti6mw0er"]
 
 [ext_resource type="Script" uid="uid://olshy0nqyw3m" path="res://Scenes/Scripts/f001_01.gd" id="1_wx5nh"]
 [ext_resource type="Texture2D" uid="uid://e1ihpautx8r1" path="res://Assets/Digicam/DSC06859.JPG" id="2_4aqfn"]
 [ext_resource type="Texture2D" uid="uid://bp7xsg7etv8ib" path="res://Assets/Cursor/Left_Button.png" id="2_f6qfd"]
-[ext_resource type="Texture2D" uid="uid://bp17wta7y34jl" path="res://Assets/Cursor/Right_Button.png" id="3_wx5nh"]
 [ext_resource type="Script" uid="uid://drp8uwkibvcbo" path="res://Scenes/Area2D_Scripts/kiosk_left_button.gd" id="5_4aqfn"]
 [ext_resource type="FontFile" uid="uid://bnnhj8xv7cg1" path="res://Assets/Font/VCR_OSD_MONO_1.001.ttf" id="7_yjpth"]
 
@@ -64,22 +63,13 @@ shape = SubResource("RectangleShape2D_yy4dh")
 
 [node name="LeftButton" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 455.99997
-offset_top = 558.0
-offset_right = 1736.0001
-offset_bottom = 1838.0
+offset_left = 539.0
+offset_top = 550.0
+offset_right = 1819.0001
+offset_bottom = 1830.0
 scale = Vector2(0.055, 0.055)
 texture = ExtResource("2_f6qfd")
 script = ExtResource("5_4aqfn")
-
-[node name="RighButton" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 644.0
-offset_top = 558.0
-offset_right = 1924.0
-offset_bottom = 1838.0
-scale = Vector2(0.055, 0.055)
-texture = ExtResource("3_wx5nh")
 
 [node name="TextLabel" type="Label" parent="."]
 layout_mode = 0

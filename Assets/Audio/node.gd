@@ -11,7 +11,8 @@ var music_tracks = {
 	"vhs_static": preload("res://Assets/Audio/vhs_static.mp3"),
 	"ambiance_extreme": preload("res://Assets/Audio/ambiance_extreme(1).MP3"),
 	"waltz": preload("res://Assets/Audio/Audio_Intro/intro_bgm(2).MP3"),
-	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3")
+	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3"),
+	"parable_cutscene": preload("res://Assets/Audio/bgm_parable_cutscene.MP3")
 }
 
 var sfx_sounds = {
@@ -32,7 +33,8 @@ var sfx_sounds = {
 	"gate_open": preload("res://Assets/Audio/cr_opening.MP3"),
 	"telephone_convo": preload("res://Assets/Audio/telephone_convo(1).MP3"),
 	"footstep": preload("res://Assets/Audio/corridor_footstep.MP3"),
-	"flashlight": preload("res://Assets/Audio/flashlight_on.MP3")
+	"flashlight": preload("res://Assets/Audio/flashlight_on.MP3"),
+	"scream": preload("res://Assets/Audio/cutoff_scream.MP3")
 
 }
 

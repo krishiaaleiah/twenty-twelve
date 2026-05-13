@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready() -> void:
 	AudioManager.stop_all_bgm()
+#	AudioManager.play_sfx("scream")
 	await get_tree().create_timer(0.3).timeout
 	
 	if GlobalManager.is_load_game == true:

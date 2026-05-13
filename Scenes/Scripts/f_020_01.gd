@@ -9,6 +9,7 @@ func _ready() -> void:
 		trigger_jumpscare()
 
 func trigger_jumpscare() -> void:
+	AudioManager.play_sfx("scream")
 	jumpscare.visible = true
 	await get_tree().create_timer(1.0).timeout
 	jumpscare.visible = false
