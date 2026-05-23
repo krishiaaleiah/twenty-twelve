@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=3 uid="uid://gu4m6dg0hj3e"]
+
+[ext_resource type="Texture2D" uid="uid://rk5vjgwiaeqr" path="res://Assets/Pictures/Logo_Sandigambayan.png" id="1_5kma4"]
+[ext_resource type="Script" uid="uid://b6rlxkp17tst" path="res://Scenes/ExtraScenes/Script/police_report.gd" id="1_k271x"]
+[ext_resource type="FontFile" uid="uid://bnnhj8xv7cg1" path="res://Assets/Font/VCR_OSD_MONO_1.001.ttf" id="2_4yf81"]
+[ext_resource type="Texture2D" uid="uid://dhiwicct5txdv" path="res://Assets/Pictures/Philippine_National_Police_seal.png" id="3_k271x"]
+[ext_resource type="Shader" uid="uid://fgvjrs21ucdq" path="res://Scenes/Intoduction_Clip/Shader/Archive-Shader.gdshader" id="4_wiplv"]
+[ext_resource type="Texture2D" uid="uid://rjdfp7lhfque" path="res://Assets/Pictures/Victim1.jpg" id="5_nt10k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a01lp"]
+font = ExtResource("2_4yf81")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s04v4"]
+shader = ExtResource("4_wiplv")
+shader_parameter/blur_amount = 1.5
+
+[node name="PoliceReport" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k271x")
+
+[node name="SubViewport" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewport"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="SANIDGAMBAYAN" type="TextureRect" parent="SubViewport/SubViewport"]
+z_index = 1
+offset_left = 920.0
+offset_top = 7.0
+offset_right = 1086.0
+offset_bottom = 173.0
+texture = ExtResource("1_5kma4")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="SubViewport/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_right = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SubViewport/SubViewport"]
+offset_left = 239.00002
+offset_top = 47.0
+offset_right = 511.0
+offset_bottom = 70.0
+scale = Vector2(2.415, 2.415)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Philippines Police Department"
+label_settings = SubResource("LabelSettings_a01lp")
+
+[node name="Label2" type="Label" parent="SubViewport/SubViewport"]
+z_index = 11
+offset_left = 454.99997
+offset_top = 115.0
+offset_right = 626.84265
+offset_bottom = 138.0
+scale = Vector2(1.495, 1.495)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Attempt to locate"
+label_settings = SubResource("LabelSettings_a01lp")
+
+[node name="Label3" type="Label" parent="SubViewport/SubViewport"]
+z_index = 11
+offset_left = 457.00003
+offset_top = 371.0
+offset_right = 628.84265
+offset_bottom = 394.0
+scale = Vector2(1.495, 1.495)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "STATUS: MISSING"
+label_settings = SubResource("LabelSettings_a01lp")
+
+[node name="PNP" type="TextureRect" parent="SubViewport/SubViewport"]
+offset_left = 88.0
+offset_top = 6.0
+offset_right = 186.0
+offset_bottom = 142.79167
+texture = ExtResource("3_k271x")
+expand_mode = 1
+
+[node name="SHADER" type="ColorRect" parent="SubViewport/SubViewport"]
+z_index = 10
+material = SubResource("ShaderMaterial_s04v4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_right = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Victim" type="TextureRect" parent="SubViewport/SubViewport"]
+offset_left = 486.99997
+offset_top = 143.0
+offset_right = 656.0
+offset_bottom = 355.0
+texture = ExtResource("5_nt10k")
+expand_mode = 1

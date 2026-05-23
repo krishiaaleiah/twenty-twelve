@@ -20,5 +20,6 @@ func _on_bush_mouse_exited() -> void:
 func _on_bush_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			CursorManager.set_normal()
 			AudioManager.play_sfx("click")
 			get_tree().change_scene_to_file("res://Scenes/Game/d_002_005.tscn")

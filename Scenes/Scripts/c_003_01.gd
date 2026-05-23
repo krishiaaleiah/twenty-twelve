@@ -13,6 +13,7 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if GlobalManager.is_key_picked_up == 0:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("click")
 				area.hide()
 				text.show()
@@ -20,10 +21,12 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 				area.show()
 				text.hide()
 			elif GlobalManager.is_key_picked_up == 1:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("gate_open")
 				SceneChanger.change_scene("res://Scenes/Game/c_004_01.tscn")
 				GlobalManager.is_key_picked_up = 2
 			elif GlobalManager.is_key_picked_up == 2:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("click")
 				get_tree().change_scene_to_file("res://Scenes/Game/c_004_01.tscn")
 

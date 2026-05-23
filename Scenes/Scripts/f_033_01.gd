@@ -17,6 +17,7 @@ func _on_forward_mouse_exited() -> void:
 func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			CursorManager.set_normal()
 			AudioManager.play_sfx("click")
 			get_tree().change_scene_to_file("res://Scenes/Game/f_034_01.tscn")
 
@@ -34,6 +35,7 @@ func _on_telephone_input_event(viewport: Node, event: InputEvent, shape_idx: int
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if GlobalManager.is_vm_triggered == false:
+				CursorManager.set_normal()
 				AudioManager.stop_all_bgm()
 				AudioManager.play_sfx("click")
 				area.hide()

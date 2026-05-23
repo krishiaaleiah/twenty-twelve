@@ -20,6 +20,7 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton:
 			if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 				if GlobalManager.is_picture_picked_up == false:
+					CursorManager.set_normal()
 					AudioManager.play_sfx("click")
 					Inventory.add_item("picture piece 1")
 					text.show()

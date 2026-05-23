@@ -12,6 +12,7 @@ func _on_key_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if GlobalManager.is_key_picked_up == 0:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("click")
 				item_pickup.show()
 				pickup_text.show()

@@ -12,9 +12,11 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton:
 			if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 				if GlobalManager.hallway_trigger == 0:
+					CursorManager.set_normal()
 					AudioManager.play_sfx("click")
 					get_tree().change_scene_to_file("res://Scenes/Game/f_010_01.tscn")
 				elif GlobalManager.hallway_trigger == 2:
+					CursorManager.set_normal()
 					AudioManager.play_sfx("click")
 					get_tree().change_scene_to_file("res://Scenes/Game/f_014_01.tscn")
 #BACK

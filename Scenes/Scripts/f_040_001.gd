@@ -7,7 +7,7 @@ extends Control
 
 func _ready() -> void:
 	CursorManager.set_normal()
-	
+
 #temporary code FOR playtesting lang
 
 func _on_back_mouse_entered() -> void:
@@ -30,12 +30,14 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if Inventory.has_item("building key"):
 				if Inventory.has_item("picture piece 1") and Inventory.has_item("picture piece 2"):
+					CursorManager.set_normal()
 					AudioManager.play_sfx("gate_open")
 					door.hide()
 					back.hide()
 					await get_tree().create_timer(1.0).timeout
 					SceneChanger.change_scene("res://Scenes/ExtraScenes/cut_scene_door.tscn")
 				else:
+					CursorManager.set_normal()
 					AudioManager.play_sfx("door_knock")
 					picture_text.show()
 					door.hide()
@@ -43,6 +45,7 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 					door.show()
 					picture_text.hide()
 			else:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("door_knock")
 				door_text.show()
 				door.hide()

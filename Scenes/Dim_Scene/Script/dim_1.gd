@@ -45,6 +45,7 @@ func _on_forward_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 				jumpscare.play()
 				jumpscare.finished.connect(_on_video_finished)
 			else:
+				CursorManager.set_normal()
 				GlobalManager.scene_count += 1
 				AudioManager.play_sfx("click")
 				GlobalManager.text_scene = true

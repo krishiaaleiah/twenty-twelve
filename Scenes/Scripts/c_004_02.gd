@@ -17,6 +17,7 @@ func _on_wallet_2_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if GlobalManager.is_wallet_picked_up == false:
+				CursorManager.set_normal()
 				area.hide()
 				AudioManager.play_sfx("click")
 				text.show()

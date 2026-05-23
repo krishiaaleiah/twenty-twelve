@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://0kku8kvndvvu"]
+
+[ext_resource type="Shader" uid="uid://fgvjrs21ucdq" path="res://Scenes/Intoduction_Clip/Shader/Archive-Shader.gdshader" id="1_5ljlu"]
+[ext_resource type="Script" uid="uid://5qaymd88766m" path="res://Scenes/ExtraScenes/Script/entity_intro.gd" id="1_6g28u"]
+[ext_resource type="Texture2D" uid="uid://rks7b77hdl71" path="res://Assets/Pictures/Victim3_3_-removebg-preview.png" id="2_6g28u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s04v4"]
+shader = ExtResource("1_5ljlu")
+shader_parameter/blur_amount = 1.5
+
+[node name="Entity" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6g28u")
+
+[node name="SHADER" type="ColorRect" parent="."]
+z_index = 10
+material = SubResource("ShaderMaterial_s04v4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Victim" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 486.99997
+offset_top = 143.0
+offset_right = 656.0
+offset_bottom = 355.0
+texture = ExtResource("2_6g28u")
+expand_mode = 1

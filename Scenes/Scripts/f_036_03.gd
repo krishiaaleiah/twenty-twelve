@@ -20,6 +20,7 @@ func _on_interact_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if GlobalManager.is_code == false:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("click")
 				area.hide()
 				text.show()
@@ -28,6 +29,7 @@ func _on_interact_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 				Inventory.add_item("passcode")
 				GlobalManager.is_code = true
 			elif GlobalManager.is_code == true:
+				CursorManager.set_normal()
 				AudioManager.play_sfx("click")
 				area.hide()
 				text.show()
