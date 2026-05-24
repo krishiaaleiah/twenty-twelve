@@ -1,6 +1,6 @@
 extends TextureRect
 
-@export var fade_duration: float = 15.0  # Time in seconds to reach full visibility
+@export var fade_duration: float = 18.0  # Time in seconds to reach full visibility
 @export var delay_before_fade: float = 0.5 # Wait time before the fade starts
 
 func _ready():

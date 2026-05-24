@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://crng0jt2hxiw4"]
+[gd_scene load_steps=10 format=3 uid="uid://crng0jt2hxiw4"]
 
 [ext_resource type="Script" uid="uid://1re7nhpnrwe3" path="res://Scenes/ExtraScenes/Script/police_report_2.gd" id="1_2encn"]
 [ext_resource type="Texture2D" uid="uid://rk5vjgwiaeqr" path="res://Assets/Pictures/Logo_Sandigambayan.png" id="2_2encn"]
@@ -7,13 +7,18 @@
 [ext_resource type="Shader" uid="uid://fgvjrs21ucdq" path="res://Scenes/Intoduction_Clip/Shader/Archive-Shader.gdshader" id="5_0oygd"]
 [ext_resource type="Texture2D" uid="uid://b2gi0djxcgs2r" path="res://Assets/Pictures/Victim2.jpg" id="6_06o6l"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_a01lp"]
+[sub_resource type="LabelSettings" id="LabelSettings_06o6l"]
 font = ExtResource("3_dyxe3")
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s04v4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2encn"]
 shader = ExtResource("5_0oygd")
 shader_parameter/blur_amount = 1.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_2encn"]
+font = ExtResource("3_dyxe3")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
 
 [node name="PoliceReport" type="Control"]
 layout_mode = 3
@@ -34,10 +39,11 @@ render_target_update_mode = 4
 
 [node name="SANIDGAMBAYAN" type="TextureRect" parent="SubViewport/SubViewport"]
 z_index = 1
-offset_left = 961.0
-offset_top = 7.0
-offset_right = 1127.0
-offset_bottom = 173.0
+offset_left = 908.0
+offset_top = 22.0
+offset_right = 1074.0
+offset_bottom = 188.0
+scale = Vector2(0.715, 0.715)
 texture = ExtResource("2_2encn")
 expand_mode = 1
 
@@ -45,18 +51,20 @@ expand_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 118.0
+offset_right = -101.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="SubViewport/SubViewport"]
-offset_left = 242.00002
-offset_top = 36.0
-offset_right = 514.0
-offset_bottom = 59.0
-scale = Vector2(2.415, 2.415)
+offset_left = 327.0
+offset_top = 40.0
+offset_right = 599.0
+offset_bottom = 63.0
+scale = Vector2(1.86, 1.86)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Philippines Police Department"
-label_settings = SubResource("LabelSettings_a01lp")
+label_settings = SubResource("LabelSettings_06o6l")
 
 [node name="Label2" type="Label" parent="SubViewport/SubViewport"]
 z_index = 11
@@ -67,7 +75,7 @@ offset_bottom = 138.0
 scale = Vector2(1.495, 1.495)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Attempt to locate"
-label_settings = SubResource("LabelSettings_a01lp")
+label_settings = SubResource("LabelSettings_06o6l")
 
 [node name="Label3" type="Label" parent="SubViewport/SubViewport"]
 z_index = 11
@@ -78,22 +86,25 @@ offset_bottom = 394.0
 scale = Vector2(1.495, 1.495)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "STATUS: MISSING"
-label_settings = SubResource("LabelSettings_a01lp")
+label_settings = SubResource("LabelSettings_06o6l")
 
 [node name="PNP" type="TextureRect" parent="SubViewport/SubViewport"]
-offset_left = 45.0
-offset_top = 6.0
-offset_right = 143.0
-offset_bottom = 142.79167
+offset_left = 162.0
+offset_top = 19.0
+offset_right = 260.0
+offset_bottom = 155.79167
+scale = Vector2(0.835, 0.835)
 texture = ExtResource("4_fvre4")
 expand_mode = 1
 
 [node name="SHADER" type="ColorRect" parent="SubViewport/SubViewport"]
 z_index = 10
-material = SubResource("ShaderMaterial_s04v4")
+material = SubResource("ShaderMaterial_2encn")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 109.0
+offset_right = -89.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -104,3 +115,14 @@ offset_right = 656.0
 offset_bottom = 355.0
 texture = ExtResource("6_06o6l")
 expand_mode = 1
+
+[node name="Desciption" type="Label" parent="SubViewport/SubViewport"]
+z_index = 10
+offset_left = 104.00001
+offset_top = 453.00003
+offset_right = 911.0
+offset_bottom = 578.0
+scale = Vector2(1.2, 1.2)
+label_settings = SubResource("LabelSettings_2encn")
+horizontal_alignment = 1
+vertical_alignment = 1

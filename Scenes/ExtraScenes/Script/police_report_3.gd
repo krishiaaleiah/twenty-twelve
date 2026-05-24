@@ -1,5 +1,5 @@
 extends Control
 
 func _ready() -> void:
-	await get_tree().create_timer(3.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/ExtraScenes/victim_1.tscn")
+	await get_tree().create_timer(12).timeout
+	get_tree().change_scene_to_file("res://Scenes/Intoduction_Clip/title.tscn")

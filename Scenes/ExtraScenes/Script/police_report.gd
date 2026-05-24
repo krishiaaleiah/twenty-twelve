@@ -1,5 +1,6 @@
 extends Control
 
 func _ready() -> void:
-	await get_tree().create_timer(3.5).timeout
+	AudioManager.play_sfx("testimony")
+	await get_tree().create_timer(12).timeout
 	get_tree().change_scene_to_file("res://Scenes/ExtraScenes/police_report2.tscn")

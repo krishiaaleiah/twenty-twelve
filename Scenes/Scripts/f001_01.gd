@@ -5,6 +5,8 @@ extends Control
 @onready var left: TextureRect = $LeftButton
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	AudioManager.stop_bgm("testimony")
 	InventoryUi.show()
 	CursorManager.set_normal()
 	text.hide()

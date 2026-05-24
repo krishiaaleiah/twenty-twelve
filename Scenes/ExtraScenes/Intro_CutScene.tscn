@@ -1,18 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1xd7iajajm5q"]
 
 [ext_resource type="Script" uid="uid://dce6epnuym7sp" path="res://Scenes/ExtraScenes/Script/intro_cut_scene.gd" id="1_2ujbw"]
-[ext_resource type="Shader" uid="uid://v7anflp3w6uj" path="res://Scenes/Intoduction_Clip/Shader/warp.gdshader" id="1_jk6wh"]
+[ext_resource type="Shader" uid="uid://cessl0n4cx8ps" path="res://Scenes/Intoduction_Clip/Shader/SubviewportContainer.gdshader" id="2_2ujbw"]
 [ext_resource type="VideoStream" uid="uid://ceito8kqqnsf1" path="res://Assets/Video_Clips/revised-intro-ogmywt.ogv" id="2_jk6wh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2ujbw"]
-shader = ExtResource("1_jk6wh")
+shader = ExtResource("2_2ujbw")
 shader_parameter/shake_power = 0.005
 shader_parameter/shake_rate = 0.5
 shader_parameter/shake_speed = 5.0
 shader_parameter/shake_block_size = 10.0
 shader_parameter/color_drift = 0.0005
-shader_parameter/curve_x = 0.1
-shader_parameter/curve_y = 0.1
 
 [node name="Control" type="Control"]
 layout_mode = 3
