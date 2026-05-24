@@ -26,6 +26,7 @@ func _on_id_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if GlobalManager.is_id_picked_up == false:
+				GlobalManager.is_evidence_picked_up = true
 				AudioManager.play_sfx("click")
 				CursorManager.set_normal()
 				label.show()

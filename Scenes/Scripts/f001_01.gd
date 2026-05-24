@@ -3,6 +3,7 @@ extends Control
 @onready var text2: Label = $TextLabel2
 @onready var cr_area: Area2D = $CR
 @onready var left: TextureRect = $LeftButton
+@onready var time: Label = $Label
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -15,12 +16,19 @@ func _ready() -> void:
 	if GlobalManager.is_code == true:
 		left.hide()
 	
+	if GlobalManager.hallway_trigger == 2:
+		time.hide()
+		if GlobalManager.is_evidence_picked_up == true:
+			left.show()
+		else:
+			left.hide()
 
 func _show_label():
 	if GlobalManager.hallway_trigger == 0:
 		AudioManager.play_bgm("outside")
 		cr_area.hide()
 	elif GlobalManager.hallway_trigger == 1:
+		left.hide()
 		AudioManager.stop_all_bgm()
 		AudioManager.play_bgm("ambiance_extreme")
 		AudioManager.play_sfx("type")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://0m31ti6mw0er"]
+[gd_scene load_steps=10 format=3 uid="uid://0m31ti6mw0er"]
 
 [ext_resource type="Script" uid="uid://olshy0nqyw3m" path="res://Scenes/Scripts/f001_01.gd" id="1_wx5nh"]
 [ext_resource type="Texture2D" uid="uid://e1ihpautx8r1" path="res://Assets/Digicam/DSC06859.JPG" id="2_4aqfn"]
 [ext_resource type="Texture2D" uid="uid://bp7xsg7etv8ib" path="res://Assets/Cursor/Left_Button.png" id="2_f6qfd"]
 [ext_resource type="Script" uid="uid://drp8uwkibvcbo" path="res://Scenes/Area2D_Scripts/kiosk_left_button.gd" id="5_4aqfn"]
+[ext_resource type="LabelSettings" uid="uid://ijr2ruqji7tl" path="res://label_popup_settings.tres" id="6_4aqfn"]
 [ext_resource type="FontFile" uid="uid://bnnhj8xv7cg1" path="res://Assets/Font/VCR_OSD_MONO_1.001.ttf" id="7_yjpth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy4dh"]
@@ -99,8 +100,13 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 95.0
+offset_bottom = 44.0
+scale = Vector2(2.025, 2.025)
+text = "Time: 9:47 PM"
+label_settings = ExtResource("6_4aqfn")
 
 [connection signal="input_event" from="CR" to="." method="_on_cr_input_event"]
 [connection signal="mouse_entered" from="CR" to="." method="_on_cr_mouse_entered"]

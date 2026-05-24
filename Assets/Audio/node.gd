@@ -36,7 +36,8 @@ var sfx_sounds = {
 	"footstep": preload("res://Assets/Audio/corridor_footstep.MP3"),
 	"flashlight": preload("res://Assets/Audio/flashlight_on.MP3"),
 	"scream": preload("res://Assets/Audio/cutoff_scream.MP3"),
-	"testimony": preload("res://Assets/Audio/Audio_Intro/revised_testimony_1.MP3")
+	"testimony": preload("res://Assets/Audio/Audio_Intro/revised_testimony_1.MP3"),
+	"pick_up": preload("res://Assets/Audio/Audio_Intro/pick_up_call.MP3")
 
 }
 

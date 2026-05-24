@@ -85,7 +85,7 @@ offset_right = 628.84265
 offset_bottom = 394.0
 scale = Vector2(1.495, 1.495)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "STATUS: MISSING"
+text = "STATUS: Missing"
 label_settings = SubResource("LabelSettings_06o6l")
 
 [node name="PNP" type="TextureRect" parent="SubViewport/SubViewport"]
@@ -118,11 +118,13 @@ expand_mode = 1
 
 [node name="Desciption" type="Label" parent="SubViewport/SubViewport"]
 z_index = 10
-offset_left = 104.00001
-offset_top = 453.00003
-offset_right = 911.0
-offset_bottom = 578.0
+offset_left = 154.0
+offset_top = 424.00003
+offset_right = 884.0
+offset_bottom = 623.0
 scale = Vector2(1.2, 1.2)
+text = "Eye witnesses stated that Jeth was first spotted near the kiosk area, where he was observed lingering for approximately 15 minutes. Some students saw that he seemed visibly agitated, frequently glancing over his shoulder as if watching for someone. He was seen heading toward the bathroom and had not come out for an extended period of time. When the bathroom was eventually checked, one of the stall doors was found locked from the inside, but no one was present upon forced entry. Personal belongings — an ID and a water bottle — were left behind. One witness stated, \"Naririnig ko siyang umiiyak, tapos biglang tumahimik.\" The janitor added, \"Hindi ko siya nakitang lumabas, kahit sandali.\" No active traces have been seen yet."
 label_settings = SubResource("LabelSettings_2encn")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3

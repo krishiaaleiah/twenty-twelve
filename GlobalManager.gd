@@ -16,7 +16,7 @@ var running_jumpscare_triggered = false
 var is_vm_triggered = false
 var is_door_key_picked_up = false
 var is_code = false
-
+var is_evidence_picked_up = false
 # For the DIM porgression
 var text_scene = false
 var scene_count = 0
