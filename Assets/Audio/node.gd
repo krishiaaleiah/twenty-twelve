@@ -17,7 +17,9 @@ var music_tracks = {
 	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3"),
 	"parable_cutscene": preload("res://Assets/Audio/bgm_parable_cutscene.MP3"),
 	"testimony": preload("res://Assets/Audio/Audio_Intro/testimony.MP3"),
-	"runrabbit": preload("res://Assets/Audio/run rabbit.mp3")
+	"runrabbit": preload("res://Assets/Audio/run rabbit.mp3"),
+	"ending": preload("res://Assets/Audio/ending.MP3"),
+	"run": preload("res://Assets/Audio/copy_EC47487F-7632-4861-8E5A-802AD11A2B28.mp3")
 }
 
 var sfx_sounds = {
