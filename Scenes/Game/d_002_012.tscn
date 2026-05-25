@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://x76vrj7pmr1d"]
 
-[ext_resource type="Script" uid="uid://dfkt0wprshy1j" path="res://d_002_012.gd" id="1_7vrfj"]
+[ext_resource type="Script" uid="uid://368jqgkxpfth" path="res://Scenes/Scripts/d_002_012.gd" id="1_7vrfj"]
 [ext_resource type="Texture2D" uid="uid://k6lv1l4baioe" path="res://Assets/Digicam/DSC06908.JPG" id="1_75prw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vrfj"]
