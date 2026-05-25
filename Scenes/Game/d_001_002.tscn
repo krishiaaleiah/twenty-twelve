@@ -10,7 +10,7 @@ size = Vector2(92, 117)
 size = Vector2(314.5, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0hfr"]
-size = Vector2(71.84375, 119.4375)
+size = Vector2(71.84375, 127.71875)
 
 [node name="d_001_002" type="Control"]
 layout_mode = 3
@@ -65,7 +65,7 @@ debug_color = Color(0.66915, 0.38691995, 0.84936535, 0.41960785)
 [node name="ToPlant" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToPlant"]
-position = Vector2(742.9219, 312)
+position = Vector2(742.9219, 307.85938)
 shape = SubResource("RectangleShape2D_h0hfr")
 
 [connection signal="input_event" from="Forward" to="." method="_on_forward_input_event"]

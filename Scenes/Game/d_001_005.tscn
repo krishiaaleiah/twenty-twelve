@@ -3,9 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dl80jbknq4ai2" path="res://Assets/Digicam/DSC06881.JPG" id="1_gj6qi"]
 [ext_resource type="Script" uid="uid://cact2af666guq" path="res://Scenes/Scripts/d_001_005.gd" id="1_iwa3b"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iwa3b"]
-radius = 83.0
-height = 166.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwa3b"]
+size = Vector2(48.255592, 50.821625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ej2mi"]
 size = Vector2(314.5, 36)
@@ -50,8 +49,9 @@ texture = ExtResource("1_gj6qi")
 [node name="Note2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Note2"]
-position = Vector2(600, 270)
-shape = SubResource("CapsuleShape2D_iwa3b")
+position = Vector2(601, 265.99997)
+rotation = 1.9411244
+shape = SubResource("RectangleShape2D_iwa3b")
 
 [node name="BACK" type="Area2D" parent="."]
 

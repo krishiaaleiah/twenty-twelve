@@ -4,6 +4,9 @@ extends Node
 # Key: track_name (String), Value: AudioStreamPlayer2D instance
 var active_bgm_players = {}
 
+var parable_cutscene_played := false
+var parable_cutscene_played2 := false
+
 var music_tracks = {
 	"static": preload("res://Assets/Audio/radio_static_2.MP3"),
 	"glitch": preload("res://Assets/Audio/glitch_static(1).MP3"),

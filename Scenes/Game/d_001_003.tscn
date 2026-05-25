@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bkhmj2yk6t3gq" path="res://Scenes/Scripts/d_001_003.gd" id="1_xdj17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdj17"]
-size = Vector2(116.5, 130.25)
+size = Vector2(123.25, 176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnt8f"]
 size = Vector2(314.5, 36)
@@ -49,7 +49,7 @@ texture = ExtResource("1_r4d6n")
 [node name="Forward" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forward"]
-position = Vector2(589, 306)
+position = Vector2(585.625, 298)
 shape = SubResource("RectangleShape2D_xdj17")
 
 [node name="BACK" type="Area2D" parent="."]
