@@ -1,6 +1,17 @@
 extends Control
 func _ready() -> void:
 	CursorManager.set_normal()
+	if GlobalManager.is_picture5_picked_up:
+		$TextureRect2.visible = true
+		AudioManager.play_bgm("parable_cutscene")
+		get_tree().create_timer(5.0).timeout.connect(func():
+			$TextureRect2.visible = false
+			AudioManager.stop_bgm("parable_cutscene")
+			Inventory.add_item("main gate key")
+			get_tree().change_scene_to_file("res://Scenes/Game/d_002_023.tscn")
+		)
+	else:
+		$TextureRect2.visible = false
 
 func _on_forward_mouse_entered() -> void:
 	CursorManager.set_hover()

@@ -16,7 +16,8 @@ var music_tracks = {
 	"waltz": preload("res://Assets/Audio/Audio_Intro/intro_bgm(2).MP3"),
 	"bsod": preload("res://Assets/Audio/Audio_Intro/bsod_sfx.mp3"),
 	"parable_cutscene": preload("res://Assets/Audio/bgm_parable_cutscene.MP3"),
-	"testimony": preload("res://Assets/Audio/Audio_Intro/testimony.MP3")
+	"testimony": preload("res://Assets/Audio/Audio_Intro/testimony.MP3"),
+	"runrabbit": preload("res://Assets/Audio/run rabbit.mp3")
 }
 
 var sfx_sounds = {

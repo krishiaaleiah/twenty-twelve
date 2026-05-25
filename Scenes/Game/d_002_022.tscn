@@ -71,13 +71,13 @@ texture = ExtResource("3_ufrdj")
 
 [node name="Text" type="Label" parent="."]
 layout_mode = 0
-offset_left = 402.00003
-offset_top = 185.00003
-offset_right = 495.7656
-offset_bottom = 218.00003
+offset_left = 310.0
+offset_top = 154.00002
+offset_right = 515.985
+offset_bottom = 187.00002
 scale = Vector2(2.005, 2.005)
 theme_override_styles/normal = SubResource("StyleBoxFlat_f1hsr")
-text = "You found me!"
+text = "Find me again for a better reward"
 label_settings = SubResource("LabelSettings_erifl")
 horizontal_alignment = 1
 vertical_alignment = 1
