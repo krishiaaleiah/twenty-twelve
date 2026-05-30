@@ -2,6 +2,7 @@ extends Control
 func _ready() -> void:
 	CursorManager.set_normal()
 	if GlobalManager.is_picture5_picked_up:
+		AudioManager.stop_all_bgm()
 		$TextureRect2.visible = true
 		AudioManager.play_bgm("parable_cutscene")
 		get_tree().create_timer(5.0).timeout.connect(func():

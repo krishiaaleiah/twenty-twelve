@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	AudioManager.stop_all_bgm()
 	CursorManager.set_normal()
 	
 	if not AudioManager.parable_cutscene_played:
@@ -18,6 +19,7 @@ func _ready() -> void:
 			$TextureRect2.visible = false
 			$Text.visible = false
 			$Text2.visible = false
+			AudioManager.play_bgm("ambiance_extreme")
 		)
 	else:
 		$TextureRect2.visible = false

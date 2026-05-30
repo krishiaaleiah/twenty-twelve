@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	AudioManager.stop_all_bgm()
 	CursorManager.set_normal()
 	
 	if not AudioManager.parable_cutscene_played2:
@@ -15,6 +16,7 @@ func _ready() -> void:
 			$Text.visible = false
 			GlobalManager.is_picture5_picked_up = true
 			Inventory.add_item("picture number 5")
+			AudioManager.play_bgm("ambiance_extreme")
 		)
 	else:
 		$TextureRect2.visible = false

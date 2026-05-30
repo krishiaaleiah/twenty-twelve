@@ -1,7 +1,8 @@
 extends Control
-@onready var item_pickup: TextureRect = $ITEM_PICKUP
-@onready var redact: ColorRect = $REDACT
-@onready var pickup_text: Label = $TEXT
+
+#onready var item_pickup: TextureRect = $ITEM_PICKUP
+@onready var redact: ColorRect = $ColorRect
+@onready var pickup_text: Label = $Label
 
 func _ready() -> void:
 	CursorManager.set_normal()
@@ -14,10 +15,10 @@ func _on_key_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 			if GlobalManager.is_key_picked_up == 0:
 				CursorManager.set_normal()
 				AudioManager.play_sfx("click")
-				item_pickup.show()
+#				item_pickup.show()
 				pickup_text.show()
 				await get_tree().create_timer(2.5).timeout
-				item_pickup.hide()
+#			item_pickup.hide()
 				pickup_text.hide()
 				redact.show()
 				GlobalManager.is_key_picked_up = 1

@@ -66,3 +66,5 @@ text = "akala mo makakaalis ka?"
 label_settings = ExtResource("3_lvx6i")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="input_event" from="Forward" to="." method="_on_forward_input_event"]
